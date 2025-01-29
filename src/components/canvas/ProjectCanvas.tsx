@@ -2,7 +2,7 @@ import { Center, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React, { Suspense } from 'react'
 import CanvasLoader from './CanvasLoader'
-import DemoComputer from '../DemoComputer'
+import DemoComputer from './DemoComputer'
 
 interface ProjectCanvasProps {
     texture: string
