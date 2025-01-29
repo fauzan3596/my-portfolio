@@ -4,6 +4,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import ComputersCanvas from "./canvas/Computers";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -40,13 +41,13 @@ const Hero = () => {
             Hi, I&apos;m Fauzan, a Frontend Developer based in Jakarta
           </p>
 
-          <a href="#about">
+          <Link href="#about">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow className="h-3 w-3" />}
               position="right"
             />
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 .text-gray_gradient {
   @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+}
+
+.arrow-btn {
+  @apply w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient;
+}
+
+.arrow-gradient {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0.000025) 50%,
+    rgba(255, 255, 255, 0.000025) 50%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
 }
 
 .canvas-loader {
