@@ -45,22 +45,22 @@ export const technologies = [
     name: "Bootstrap",
     icon: `${url}bootstrap.png`,
   },
-  {
-    name: "DaisyUI",
-    icon: `${url}daisyui.svg`,
-  },
-  {
-    name: "Aceternity UI",
-    icon: `${url}aceternity.png`,
-  },
-  {
-    name: "git",
-    icon: `${url}git.png`,
-  },
-  {
-    name: "figma",
-    icon: `${url}figma.png`,
-  },
+  // {
+  //   name: "DaisyUI",
+  //   icon: `${url}daisyui.svg`,
+  // },
+  // {
+  //   name: "Aceternity UI",
+  //   icon: `${url}aceternity.png`,
+  // },
+  // {
+  //   name: "git",
+  //   icon: `${url}git.png`,
+  // },
+  // {
+  //   name: "figma",
+  //   icon: `${url}figma.png`,
+  // },
 ];
 
 export const myProjects = [
@@ -269,4 +269,11 @@ export const myExperiences = [
     icon: "/assets/company/ism.png",
     animation: "salute",
   },
+];
+
+export const navItems = [
+  { name: "About", link: "#about" },
+  { name: "Projects", link: "#projects" },
+  { name: "Experiences", link: "#experiences" },
+  { name: "Contact", link: "#contact" },
 ];

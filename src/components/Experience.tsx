@@ -9,7 +9,7 @@ const Experience = () => {
   const [animationName, setAnimationName] = useState("idle");
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="experiences">
       <div className="w-full text-white-600">
         <h3 className="sm:text-4xl text-3xl font-semibold text-gray_gradient">
           My Experiences

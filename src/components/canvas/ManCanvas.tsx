@@ -1,4 +1,4 @@
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, Preload } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import CanvasLoader from "./CanvasLoader";
@@ -10,7 +10,7 @@ interface ManCanvasProps {
 
 const ManCanvas = ({ animationName }: ManCanvasProps) => {
   return (
-    <Canvas>
+    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <ambientLight intensity={7} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <directionalLight position={[10, 10, 10]} intensity={1} />
@@ -19,6 +19,9 @@ const ManCanvas = ({ animationName }: ManCanvasProps) => {
       <Suspense fallback={<CanvasLoader />}>
         <Developer position-y={-3} scale={3} animationName={animationName} />
       </Suspense>
+
+
+      <Preload all />
     </Canvas>
   );
 };

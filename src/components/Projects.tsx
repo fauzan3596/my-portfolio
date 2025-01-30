@@ -6,12 +6,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaArrowUp } from "react-icons/fa6";
 import ProjectCanvas from "./canvas/ProjectCanvas";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const projectCount = myProjects.length;
 
 const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const currentProject = myProjects[selectedIndex];
 
   const handleNavigation = (direction: string) => {
     setSelectedIndex((prevIndex) => {
@@ -23,8 +24,14 @@ const Projects = () => {
     });
   };
 
+  useGSAP(() => {
+    gsap.fromTo(`.animatedText`, { opacity: 0 }, { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' });
+  }, [selectedIndex]);
+
+  const currentProject = myProjects[selectedIndex];
+
   return (
-    <section className="py-20">
+    <section className="py-20" id="projects">
       <p className="sm:text-4xl text-3xl font-semibold text-gray_gradient">
         My Selected Works
       </p>
