@@ -25,13 +25,17 @@ const Projects = () => {
   };
 
   useGSAP(() => {
-    gsap.fromTo(`.animatedText`, { opacity: 0 }, { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' });
+    gsap.fromTo(
+      `.animatedText`,
+      { opacity: 0 },
+      { opacity: 1, duration: 1, stagger: 0.2, ease: "power2.inOut" }
+    );
   }, [selectedIndex]);
 
   const currentProject = myProjects[selectedIndex];
 
   return (
-    <section className="py-20" id="projects">
+    <section className="my-20" id="projects">
       <p className="sm:text-4xl text-3xl font-semibold text-gray_gradient">
         My Selected Works
       </p>
@@ -45,6 +49,10 @@ const Projects = () => {
               width={999}
               height={384}
               className="w-full h-96 object-cover rounded-xl"
+              quality={75}
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAAKwAALACAXQAAQUxQSFIAAAABBxARFxCQERERCQEBERERCQkREREREQkREREREREREREREQEREREREQEREREQEREQERERCAABVlA4TFEAAAAvCQACEG+gkG2kyR8R+T8i8n9E5P+IyP8Rkf8jIv9HRP6PiPwfEfk/IvJ/ROT/iMj/EZH/IyL/R0T+j4j8HxH5PyLyf0Tk/4jI/xGR/yMi/0dE/o+I/B8R+T8i8n9E5P+IyP8Rkf8D4QAAAw=="
+              loading="lazy"
             />
           </div>
           <div
@@ -57,6 +65,10 @@ const Projects = () => {
               width={200}
               height={48}
               className="shadow-sm h-12 w-full"
+              quality={75}
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAAKwAALACAXQAAQUxQSFIAAAABBxARFxCQERERCQEBERERCQkREREREQkREREREREREREREQEREREREQEREREQEREQERERCAABVlA4TFEAAAAvCQACEG+gkG2kyR8R+T8i8n9E5P+IyP8Rkf8jIv9HRP6PiPwfEfk/IvJ/ROT/iMj/EZH/IyL/R0T+j4j8HxH5PyLyf0Tk/4jI/xGR/yMi/0dE/o+I/B8R+T8i8n9E5P+IyP8Rkf8D4QAAAw=="
+              loading="lazy"
             />
           </div>
 
@@ -75,7 +87,16 @@ const Projects = () => {
                   key={index}
                   className="w-10 h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center"
                 >
-                  <Image src={tag.path} alt={tag.name} height={40} width={40} />
+                  <Image
+                    src={tag.path}
+                    alt={tag.name}
+                    height={40}
+                    width={40}
+                    quality={75}
+                    placeholder="blur"
+                    blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAAKwAALACAXQAAQUxQSFIAAAABBxARFxCQERERCQEBERERCQkREREREQkREREREREREREREQEREREREQEREREQEREQERERCAABVlA4TFEAAAAvCQACEG+gkG2kyR8R+T8i8n9E5P+IyP8Rkf8jIv9HRP6PiPwfEfk/IvJ/ROT/iMj/EZH/IyL/R0T+j4j8HxH5PyLyf0Tk/4jI/xGR/yMi/0dE/o+I/B8R+T8i8n9E5P+IyP8Rkf8D4QAAAw=="
+                    loading="lazy"
+                  />
                 </div>
               ))}
             </div>

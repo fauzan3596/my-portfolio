@@ -11,7 +11,7 @@ import {
 
 import CanvasLoader from "./CanvasLoader";
 
-const Computers = ({ isMobile }: any) => {
+const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
@@ -35,7 +35,7 @@ const ComputersCanvas = () => {
     setIsMobile(mediaQuery.matches);
 
     // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event: any) => {
+    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
       setIsMobile(event.matches);
     };
 
@@ -52,7 +52,6 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-    
       camera={{ position: [25, 5, 0], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >

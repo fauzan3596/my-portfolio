@@ -3,7 +3,7 @@ import React from "react";
 import { BentoGridThirdDemo } from "./ui/BentoGrid";
 
 const About = () => {
-  return <section className="py-10 relative" id="about">
+  return <section className="my-10 relative" id="about">
     <BentoGridThirdDemo />
   </section>;
 };

@@ -8,7 +8,11 @@ import * as THREE from "three";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const DemoComputer = (props: any) => {
+interface DemoComputerProps {
+  texture?: string;
+}
+
+const DemoComputer = (props: DemoComputerProps) => {
   const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF("/models/computer.glb");
   const txt = useVideoTexture(
