@@ -8,7 +8,7 @@ const Contact = () => {
       <BackgroundBeamsWithCollision>
         <div className="flex lg:flex-row flex-col-reverse gap-7 w-full items-center pb-20">
           <ContactForm />
-          <div className="lg:h-[30rem] h-full lg:flex-[0.5] w-fit">
+          <div className="lg:h-[30rem] h-full lg:flex-[0.5] w-full">
            <World />
           </div>
         </div>
