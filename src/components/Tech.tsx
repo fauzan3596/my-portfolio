@@ -13,17 +13,7 @@ interface Technology {
 
 const Tech = () => {
   const deviceType = useDeviceType();
-
-  let filteredTech = technologies;
-
-  if (deviceType === "Mobile") {
-    filteredTech = technologies.slice(0, 5);
-  } else if (deviceType === "Tablet") {
-    filteredTech = technologies.slice(0, 8);
-  } else {
-    filteredTech = technologies;
-  }
-
+  
   return (
     <div className="flex flex-row flex-wrap justify-center md:gap-4 gap-5">
       {deviceType === "Desktop"
