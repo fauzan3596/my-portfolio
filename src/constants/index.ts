@@ -27,15 +27,15 @@ export const technologies = [
   },
   {
     name: "Three JS",
-    icon: `${url}threejs.svg`,
+    icon: `${url}threejs.png`,
   },
   {
     name: "Redux Toolkit",
     icon: `${url}redux.png`,
   },
   {
-    name: "React Query",
-    icon: `${url}reactquery.svg`,
+    name: "Firebase",
+    icon: `${url}firebase.svg`,
   },
   {
     name: "Tailwind CSS",
