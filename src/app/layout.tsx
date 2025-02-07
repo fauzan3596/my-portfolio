@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Fauzan's 3D Portfolio",
+  title: "Fauzan's Portfolio",
   description: "A 3D portfolio website built with Next.js and Three.js",
 };
 
